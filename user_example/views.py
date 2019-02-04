@@ -23,3 +23,5 @@ def register(request):
 
 def blog(request):
 	return render(request, 'user_example/blog.html')
+
+#
