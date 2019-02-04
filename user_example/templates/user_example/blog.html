@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finished!</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+<li>This content should be shown only for autorized people.</li>
+
+{% else %}
+But this content should be shown for unauthorized people!
+{% endif %}
+{% if user.is_superuser %}
+<li>This content should be shown only for superuser people.</li>
+{% endif %}
+<li>This way we can see that follow this example is a good idea (but not safe) to hide some content inside a html template, but ineffective to "block" some pages to access.</li>
+<li>To do this, we need to use the views decorator. See you later!!</li>
+</body>
+</html>

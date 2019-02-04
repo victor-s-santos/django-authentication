@@ -5,11 +5,11 @@
 	<title>Registro</title>
 </head>
 <body>
-	<h1>Página de Registro!</h1>
+	<h1>Registration page!</h1>
 	<form method="post" action="{% url 'registro' %}">
 		{% csrf_token %}
 		{% if form.errors %}
-		<p>Há erros no formulário!</p>
+		<p>There are any errors in this forms!</p>
 		{% endif %}
 		{{ form }}
 		<input type="submit" value="Register">

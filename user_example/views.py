@@ -20,3 +20,6 @@ def register(request):
 		form = UserCreationForm()
 	context = {'form': form}
 	return render(request, 'registration/register.html', context)
+
+def blog(request):
+	return render(request, 'user_example/blog.html')

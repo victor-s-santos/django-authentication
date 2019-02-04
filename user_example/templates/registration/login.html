@@ -4,12 +4,9 @@
 	<title>Login</title>
 </head>
 <body>
+	<p><h1>Welcome!</h1><h2>Enter your login and password.</h2></p>
 	{% if form.errors %}
-	<p>Ocorreu algo errado com os valores de entrada!</p>
-	{% endif %}
-
-	{% if next %}
-	<p>Você não tem acesso a esta página!</p>
+	<p>Something went wrong with the input values!</p>
 	{% endif %}
 
 	<form method="post" action="{% url 'login' %}">

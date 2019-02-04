@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Usuarios</title>
+	<title>Users</title>
 </head>
 <body>
-	<p><h1>Esta é a página index!</h1></p>
+	<p><h1>This is the index page!</h1></p>
 	{% if user.is_authenticated %}
-	<h2>Bem vindo {{ user.username }}, como vai você?</h2>
+	<h2>Hello {{ user.username }}, how are you?</h2>
+	<h2>Please, access the following link:<a href="{% url 'blog' %}">Link</a></h2>
 	{% else %}
-	<h2>Você não está logado!</h2>
+	<h2>You are not logged!</h2>
 	<a href="{% url 'login' %}"><h2>Login</h2></a>
 	{% endif %}
 	{% if user.is_anonymous %}
-	<p><h2>Gostaria de criar uma conta de acesso?</h2></p>
+	<p><h2>Would you like to create an account?</h2></p>
 	<a href="{% url 'registro' %}"><h2>Registro</h2></a>
 	{% endif %}
 	{% if user.is_authenticated %}
-	<p><h2>Gostaria de fazer logout?</h2></p>
+	<p><h2>Would you like to logout?</h2></p>
 	<a href="{% url 'logout' %}"><h2>Logout</h2></a>
 	{% endif %}
 </body>
